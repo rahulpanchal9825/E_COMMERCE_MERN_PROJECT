@@ -1,0 +1,156 @@
+@import "../../css-config/mixins.scss";
+
+.main-header {
+  width: 100%;
+  padding: 0 20px;
+  background-color: black;
+  color: white;
+  // border-bottom: 1px solid;
+  @include md {
+    z-index: 9;
+    // padding: 0 40;
+  }
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    // @include md {
+    //   height: 80px;
+    // }
+  }
+
+  .left {
+    list-style-type: none;
+    display: none;
+    gap: 25px;
+    @include md {
+      display: flex;
+    }
+  }
+  .center {
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+    @include md {
+      font-size: 34px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @include md {
+      gap: 25px;
+    }
+    a {
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    span {
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    svg {
+      font-size: 20px;
+      cursor: pointer;
+      @include md {
+        font-size: 24px;
+      }
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    .cart-icon {
+      position: relative;
+      span {
+        min-width: 20px;
+        text-align: center;
+        background: #8e2de2;
+        padding: 2.5px;
+        position: absolute;
+        top: -5px;
+        right: -12px;
+        font-size: 12px;
+        line-height: 1;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+      }
+    }
+  }
+
+  li {
+    font-size: 14px;
+    font-weight: 600;
+    color: white !important;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  //   subclass of main-
+  &.stikcy-header {
+    background-color: #060101;
+    color: white;
+    position: sticky;
+    top: 0;
+    transform: translateY(-60px);
+    animation: sticky ease forwards 0.3s;
+    -webkit-animation: sticky ease forwards 0.3s;
+    -webkit-transform: translateY(-60px);
+    -moz-transform: translateY(-60px);
+    -ms-transform: translateY(-60px);
+    -o-transform: translateY(-60px);
+  }
+}
+
+@keyframes sticky {
+  0% {
+    transform: translateY(-60px);
+    -webkit-transform: translateY(-60px);
+    -moz-transform: translateY(-60px);
+    -ms-transform: translateY(-60px);
+    -o-transform: translateY(-60px);
+  }
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}

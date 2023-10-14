@@ -1,0 +1,18 @@
+@import "../../css-config/mixins.scss";
+.main-content {
+    .layout {
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+        @include md {
+            max-width: 1200px;
+        }
+    }
+}
+
+.main-content{
+    max-width: calc(100% - 20px);
+    margin: 0 auto;
+    @include md {
+        max-width: 1200px;
+    }
+}
